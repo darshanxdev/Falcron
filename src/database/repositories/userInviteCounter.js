@@ -78,7 +78,9 @@ export class UserInviteCounterRepository {
         async findAllByGuild(guildId) {
                 if (!guildId) return [];
                 const Model = this.db._getModel(COLLECTION);
-                const docs = await Model.find({ guildId }).lean();
+                const docs = await Model.find({ guildId })
+                        .sort({ total: -1 })
+                        .lean();
                 return docs.map((doc) => this.db._clean(doc));
         }
 
