@@ -15,14 +15,14 @@ const regexCache = new Map();
 
 const getMentionRegex = (id) => {
         if (!id) return null;
-        if (!regexCache.has(id)) regexCache.set(id, new RegExp(`^<@!?${id}>\s*$`));
+        if (!regexCache.has(id)) regexCache.set(id, new RegExp(`^<@!?${id}>\\s*$`));
         return regexCache.get(id);
 };
 
 const getMentionPrefixRegex = (id) => {
         if (!id) return null;
         const key = `p_${id}`;
-        if (!regexCache.has(key)) regexCache.set(key, new RegExp(`^<@!?${id}>\s+`));
+        if (!regexCache.has(key)) regexCache.set(key, new RegExp(`^<@!?${id}>\\s+`));
         return regexCache.get(key);
 };
 
