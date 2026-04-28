@@ -45,7 +45,9 @@ export class Bot extends Client {
                                 },
                                 GuildMemberManager: {
                                         maxSize: 50,
-                                        keepOverLimit: (member) => member.voice?.channelId != null,
+                                        keepOverLimit: (member) =>
+                                                member.id === member.client.user?.id ||
+                                                member.voice?.channelId != null,
                                 },
                                 ReactionManager: { maxSize: 50 },
                                 ReactionUserManager: { maxSize: 100 },
