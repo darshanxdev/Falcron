@@ -1,7 +1,7 @@
 // Falcron | AeroX Development
 // Author: itsfizys
 import { Command } from '#command';
-import { MessageFlags, ActionRowBuilder, ButtonBuilder, ButtonStyle } from 'discord.js';
+import { MessageFlags, ActionRowBuilder, ButtonBuilder, ButtonStyle, PermissionFlagsBits } from 'discord.js';
 import { emoji } from '#emoji';
 import { giveawayStore } from '#giveawayUtils';
 
@@ -14,10 +14,13 @@ class GRerollCommand extends Command {
                         cooldown: 5,
                         minArgs: 1,
                         examples: ['greroll 1150000000000000000'],
+                        userPermissions: [PermissionFlagsBits.ManageGuild],
+                        permissions: [PermissionFlagsBits.ManageGuild],
                         enabledSlash: true,
                         slashData: {
                                 name: 'greroll',
                                 description: 'Rerolls a giveaway winner',
+                                defaultMemberPermissions: PermissionFlagsBits.ManageGuild,
                                 options: [
                                         {
                                                 type: 3,
