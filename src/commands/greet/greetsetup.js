@@ -27,6 +27,7 @@ class GreetSetupCommand extends Command {
                         slashData: {
                                 name: 'greetsetup',
                                 description: 'Set up greet messages for new members',
+                                defaultMemberPermissions: PermissionFlagsBits.ManageGuild,
                         },
                 });
         }
