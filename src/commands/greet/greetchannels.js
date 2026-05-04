@@ -23,6 +23,7 @@ class GreetChannelsCommand extends Command {
                         slashData: {
                                 name: 'greetchannels',
                                 description: 'Display all configured greet channels for this server',
+                                defaultMemberPermissions: PermissionFlagsBits.ManageGuild,
                         },
                 });
         }
