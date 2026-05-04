@@ -26,6 +26,7 @@ class RemoveInvitesCommand extends Command {
                         slashData: {
                                 name: 'removeinvites',
                                 description: 'Remove invites from a user',
+                                defaultMemberPermissions: PermissionFlagsBits.ManageGuild,
                                 options: [
                                         {
                                                 type: ApplicationCommandOptionType.User,
