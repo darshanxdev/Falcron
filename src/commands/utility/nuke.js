@@ -27,6 +27,7 @@ class NukeCommand extends Command {
                         slashData: {
                                 name: 'nuke',
                                 description: 'Nukes a TextChannel',
+                                defaultMemberPermissions: PermissionFlagsBits.ManageChannels,
                         },
                 });
         }
