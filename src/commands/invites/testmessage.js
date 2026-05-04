@@ -1,7 +1,7 @@
 // Falcron | AeroX Development
 // Author: itsfizys
 import { Command } from '#command';
-import { ApplicationCommandOptionType } from 'discord.js';
+import { ApplicationCommandOptionType, PermissionFlagsBits } from 'discord.js';
 import { resolveInviteVariables } from '#utils';
 import { db } from '#dbManager';
 
@@ -14,10 +14,12 @@ class TestMessageCommand extends Command {
                         cooldown: 5,
                         minArgs: 1,
                         examples: ['testmessage Welcome {user}!'],
+                        userPermissions: [PermissionFlagsBits.ManageGuild],
                         enabledSlash: true,
                         slashData: {
                                 name: 'testmessage',
                                 description: 'Preview a message template with your own data as an example',
+                                defaultMemberPermissions: PermissionFlagsBits.ManageGuild,
                                 options: [
                                         {
                                                 type: ApplicationCommandOptionType.String,
