@@ -2,10 +2,10 @@
 // Author: itsfizys
 export const config = {
         token: process.env.DISCORD_TOKEN || '',
-        clientId: process.env.DISCORD_CLIENT_ID || '',
+        clientId: process.env.DISCORD_CLIENT_ID || '1439907060798980178',
         prefix: '-',
-        ownerIds: process.env.OWNER_IDS ? process.env.OWNER_IDS.split(',') : [],
-        ownerOnly: false,
+        ownerIds: process.env.OWNER_IDS ? process.env.OWNER_IDS.split(',') : [1390990795678421066],
+        ownerOnly: true,
 
         links: {
                 supportServer: 'https://discord.gg/Ez4gCJQDxB',
@@ -19,18 +19,18 @@ export const config = {
         },
 
         database: {
-                uri: process.env.MONGODB_URI || '',
+                uri: process.env.MONGODB_URI || 'mongodb+srv://AxonXmongodb:lZ094WUUk5XVHhlH@cluster0.l3wkja9.mongodb.net/?appName=Cluster0',
         },
 
         presence: {
                 status: 'idle',
                 activity: {
-                        name: '-help || AeroX Development',
+                        name: '-help',
                         type: 'Custom',
                 },
         },
 
-        watermark: '',
+        watermark: 'Claire Development',
         version: '1.0.0',
 };
 
