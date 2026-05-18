@@ -280,36 +280,11 @@ class HelpCommand extends Command {
 
                 container.addTextDisplayComponents(
                         new TextDisplayBuilder().setContent(
-                                `Hey there, my prefix in this guild is \`${prefix}\`
-
+                                `<:arrow:1503994220187488306> Prefix for this server: \`${prefix}\`
 ` +
-                                `${emoji.news} **News** ${emoji.news}
+                                `<:arrow:1503994220187488306> Set prefix with: /setprefix
 ` +
-                                `${emoji.arrow} AeroX Development reached 4K Members!
-` +
-                                `${emoji.arrow} Join AeroX and upgrade your experience.
-
-` +
-                                `I can do invite tracking, can manage your server events with greet system, timer, polls and much more! You can checkout my other commands in the context menu!
-
-` +
-                                `${emoji.invite}   Invite tracking
-` +
-                                `${emoji.msg}  Messages
-` +
-                                `${emoji.giveaway}  Giveaways
-` +
-                                `${emoji.greet}   Greet
-` +
-                                `${emoji.timer}   Timer
-` +
-                                `${emoji.moderation}   Moderation
-` +
-                                `${emoji.poll}   Poll
-` +
-                                `${emoji.utility}   Utility
-` +
-                                `${emoji.contact}   Contact`,
+                                `<:arrow:1503994220187488306> Join Support Server for Help`
                         ),
                 );
 
